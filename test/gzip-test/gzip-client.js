@@ -82,7 +82,7 @@ var getFromTrustedZone = function(url,req,res){
 	var headers = getEnrichedHeaders(req);
 
 
-	rest.get(fullUrl, {headers: headers, disable_decoding: true}).on('complete', function(data, response){_completeFunction(data,response,res,url);});
+	rest.get(fullUrl, {headers: headers, disable_decoding: false}).on('complete', function(data, response){_completeFunction(data,response,res,url);});
 }
 
 // START POINT: //
