@@ -82,7 +82,7 @@ var getFromTrustedZone = function(url,req,res){
 	var headers = getEnrichedHeaders(req);
 
 
-	rest.get(fullUrl, {headers: headers, disable_decoding: false}).on('complete', function(data, response){_completeFunction(data,response,res,url);});
+	rest.get(fullUrl, {headers: headers, disable_decoding: true}).on('complete', function(data, response){_completeFunction(data,response,res,url);});
 }
 
 // START POINT: //
@@ -90,7 +90,7 @@ var req = new MockExpressRequest();
 var res = new MockExpressResponse();
 
 
-getFromTrustedZone("http://localhost:3000/json",req, res);
+getFromTrustedZone("http://localhost:6969/json",req, res);
 
 
 
